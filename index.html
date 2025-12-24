@@ -1,103 +1,179 @@
-1<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification"
-    content="t-RIh4dFR32hyMJT7iGNPeQG7-s8-PqnkaSGRp5RtN0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>AQIL WARSI Web Solutions | Website Design & SEO</title>
 
-    <title>AQIL WARSI Web Solutions | Website Design & SEO</title>
+<meta name="description" content="AQIL WARSI Web Solutions provides professional website design, development and SEO services.">
+<meta name="keywords" content="AQIL WARSI, Web Solutions, Website Design, Web Development, SEO">
+<meta name="author" content="AQIL WARSI">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* ===== BASIC RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    <meta name="description"
-    content="AQIL WARSI Web Solutions provides professional website design, web development and SEO services to grow your business online.">
+/* ===== BODY ===== */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f4f6f8;
+  color:#333;
+  overflow-x:hidden;
+}
 
-    <meta name="keywords"
-    content="AQIL WARSI, Web Solutions, Website Design, Web Development, SEO, Digital Services">
+/* ===== HEADER ===== */
+header{
+  background: linear-gradient(135deg,#0a58ca,#083e9e);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+  animation: heroEntry 1.2s ease forwards;
+}
 
-    <meta name="author" content="AQIL WARSI">
+header h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f6f8;
-            color: #333;
-        }
-        header {
-            background: #0a58ca;
-            color: #fff;
-            padding: 30px 15px;
-            text-align: center;
-        }
-        section {
-            padding: 30px 15px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #0a58ca;
-        }
-        .services li {
-            margin: 10px 0;
-        }
-        footer {
-            background: #111;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-        }
-        a {
-            color: #0a58ca;
-            text-decoration: none;
-        }
-        .btn {
-            display: inline-block;
-            background: #0a58ca;
-            color: #fff;
-            padding: 12px 20px;
-            margin-top: 15px;
-            border-radius: 5px;
-        }
-    </style>
+header p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* ===== SECTION ===== */
+section{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== TITLES ===== */
+h2{
+  color:#0a58ca;
+  margin-bottom:15px;
+}
+
+/* ===== SERVICES ===== */
+.services li{
+  list-style:none;
+  margin:10px 0;
+  font-size:16px;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:15px 30px;
+  background:#25D366;
+  color:#fff;
+  font-size:18px;
+  border-radius:50px;
+  text-decoration:none;
+  animation:pulse 1.5s infinite;
+  transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 25px #25D366;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes heroEntry{
+  from{
+    opacity:0;
+    transform:scale(0.8) translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:scale(1) translateY(0);
+  }
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7);}
+  70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>AQIL WARSI Web Solutions</h1>
-    <p>Professional Website Design • Development • SEO</p>
+  <h1>AQIL WARSI Web Solutions</h1>
+  <p>Professional Website Design • Development • SEO</p>
 </header>
 
-<section>
-    <h2>About Us</h2>
-    <p>
-        AQIL WARSI Web Solutions helps businesses build a strong online presence.
-        We create fast, responsive and SEO-friendly websites that help you
-        reach more customers on Google.
-    </p>
+<section class="reveal">
+  <h2>About Us</h2>
+  <p>
+    AQIL WARSI Web Solutions helps businesses build a strong online presence.
+    We create fast, responsive and SEO-friendly websites that help you grow on Google.
+  </p>
+</section>
 
-    <h2>Our Services</h2>
-    <ul class="services">
-        <li>✔ Website Design</li>
-        <li>✔ Web Development</li>
-        <li>✔ SEO (Search Engine Optimization)</li>
-        <li>✔ Business Websites</li>
-        <li>✔ Portfolio Websites</li>
-    </ul>
+<section class="reveal">
+  <h2>Our Services</h2>
+  <ul class="services">
+    <li>✔ Website Design</li>
+    <li>✔ Web Development</li>
+    <li>✔ SEO (Search Engine Optimization)</li>
+    <li>✔ Business Websites</li>
+    <li>✔ Portfolio Websites</li>
+  </ul>
 
-    <a href="https://wa.me/917302902332?text=Hello%20I%20want%20a%20website"
-   target="_blank"
-   class="whatsapp-btn">
-Contact on WhatsApp
-</a>
+  <!-- ✅ FIXED WHATSAPP LINK -->
+  <a href="https://wa.me/917302902332?text=Hello%20I%20want%20a%20website"
+     target="_blank"
+     class="whatsapp-btn">
+     Contact on WhatsApp
+  </a>
 </section>
 
 <footer>
-    <p>© 2025 AQIL WARSI Web Solutions. All Rights Reserved.</p>
+  <p>© 2025 AQIL WARSI Web Solutions. All Rights Reserved.</p>
 </footer>
+
+<script>
+/* ===== SCROLL ANIMATION ===== */
+window.addEventListener("scroll",()=>{
+  document.querySelectorAll(".reveal").forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight - 50){
+      el.classList.add("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
-Updated by aqil warsi
