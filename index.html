@@ -1,85 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AQIL WEB – Premium Digital Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aqil Web Solutions</title>
+<link rel="stylesheet" href="style.css" />
+<!-- Google Fonts for better look -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-<!-- LOADER -->
-<div class="loader">
-  <div class="loader-box"></div>
-  <p>Loading Aqil Web</p>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="bg-glow"></div>
-
-  <h1 class="logo">AQIL WEB</h1>
-  <p class="tagline">Premium Websites • Clean Animations • Trust</p>
-
-  <div class="hero-buttons">
-    <a href="https://wa.me/917302902332" target="_blank" class="btn primary">
-      WhatsApp Me
-    </a>
-    <a href="https://instagram.com/aqil_warsi" target="_blank" class="btn secondary">
-      Follow on Instagram
-    </a>
+<header>
+  <div class="container">
+    <h1 class="logo">Aqil Web Solutions</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
 
-  <div class="scroll-hint">Scroll ↓</div>
-</section>
+<main>
+  <section id="about" class="fade-in-section">
+    <h2>About Aqil Web Solutions</h2>
+    <p>
+      We help businesses and creators build premium websites that increase trust, authority, and conversions.
+      Our designs are elegant, responsive, and packed with smooth animations for a cinematic experience.
+    </p>
+  </section>
 
-<!-- ABOUT -->
-<section class="section about">
-  <h2>About Aqil Web</h2>
-  <p>
-    I design clean, fast and premium-looking websites that build trust
-    and convert visitors into clients. No cheap effects. Only classy visuals.
-  </p>
-</section>
+  <section id="services" class="fade-in-section">
+    <h2>Our Services</h2>
+    <ul class="services-list">
+      <li>Website Design</li>
+      <li>Website Development</li>
+      <li>E-commerce Solutions</li>
+      <li>SEO Optimization</li>
+      <li>Maintenance & Support</li>
+    </ul>
+  </section>
 
-<!-- SERVICES -->
-<section class="section services">
-  <h2>Services</h2>
-  <div class="service-grid">
-    <div class="service-card">Website Design</div>
-    <div class="service-card">Landing Pages</div>
-    <div class="service-card">Animated UI</div>
-    <div class="service-card">Instagram Growth Pages</div>
-    <div class="service-card">Mobile Responsive</div>
-    <div class="service-card">Modern Layouts</div>
-  </div>
-</section>
+  <section id="pricing" class="fade-in-section">
+    <h2>Pricing Plans</h2>
+    <div class="pricing-cards">
+      <div class="card">
+        <h3>Basic</h3>
+        <p class="price">₹199</p>
+        <ul>
+          <li>Responsive Design</li>
+          <li>Basic SEO</li>
+          <li>Email Support</li>
+        </ul>
+        <a href="https://wa.me/917302902332?text=Hi%20Aqil%20Web%20Solutions,%20I%20am%20interested%20in%20the%20Basic%20Plan." class="btn-whatsapp" target="_blank" rel="noopener">Contact via WhatsApp</a>
+      </div>
+      <div class="card popular">
+        <h3>Pro</h3>
+        <p class="price">₹599</p>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>Custom Features</li>
+          <li>Priority Support</li>
+        </ul>
+        <a href="https://wa.me/917302902332?text=Hi%20Aqil%20Web%20Solutions,%20I%20am%20interested%20in%20the%20Pro%20Plan." class="btn-whatsapp" target="_blank" rel="noopener">Contact via WhatsApp</a>
+      </div>
+      <div class="card">
+        <h3>Premium</h3>
+        <p class="price">₹1499</p>
+        <ul>
+          <li>All Pro Features</li>
+          <li>Advanced SEO</li>
+          <li>Dedicated Manager</li>
+        </ul>
+        <a href="https://wa.me/917302902332?text=Hi%20Aqil%20Web%20Solutions,%20I%20am%20interested%20in%20the%20Premium%20Plan." class="btn-whatsapp" target="_blank" rel="noopener">Contact via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-<!-- SIGN IN -->
-<section class="section signin">
-  <h2>Client Sign In</h2>
-
-  <div class="signin-box">
-    <input type="text" placeholder="Username">
-    <input type="password" placeholder="Password">
-    <button>Sign In</button>
-    <span class="note">Demo UI • Secure systems coming soon</span>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section cta">
-  <h2>Let’s Build Something Premium</h2>
-  <a href="https://wa.me/917302902332" target="_blank" class="btn primary big">
-    Start on WhatsApp
-  </a>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <p>© Aqil Web Studio</p>
+  <p>© 2026 Aqil Web Solutions. All rights reserved.</p>
 </footer>
+
+<script>
+// Animation on scroll fade in
+const faders = document.querySelectorAll('.fade-in-section');
+const appearOptions = { threshold: 0, rootMargin: "0px 0px -100px 0px" };
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('appear');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+</script>
 
 </body>
 </html>
-  UPDATED BY AQIL WARSI (A.W)
